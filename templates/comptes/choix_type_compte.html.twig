@@ -1,0 +1,92 @@
+{# templates/choix_type_compte.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Choix du type de compte{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .choices {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .choice {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .choice:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .choice-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .choice-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .choice-content h2 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .choice-content p {
+            font-size: 1em;
+            color: #666;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Choisissez le type de compte</h1>
+    <div class="choices">
+        <div class="choice">
+            <a href="{{ path('options_compte_bancaire') }}" class="choice-link">
+                <div class="choice-content">
+                    <h2>Compte Bancaire</h2>
+                    <p>Gérez vos comptes bancaires facilement.</p>
+                </div>
+            </a>
+        </div>
+        <div class="choice">
+            <a href="{{ path('options_compte_credit') }}" class="choice-link">
+                <div class="choice-content">
+                    <h2>Compte de Crédit</h2>
+                    <p>Gérez vos comptes de crédit rapidement.</p>
+                </div>
+            </a>
+        </div>
+        <div class="choice">
+            <a href="{{ path('options_compte_caisse') }}" class="choice-link">
+                <div class="choice-content">
+                    <h2>Compte de Caisse</h2>
+                    <p>Gérez vos comptes de caisse efficacement.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

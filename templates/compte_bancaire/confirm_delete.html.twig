@@ -1,0 +1,14 @@
+<!-- confirm_delete.html.twig -->
+<div id="confirmation-dialog">
+    <p>Êtes-vous sûr de vouloir supprimer cet élément ?</p>
+    <form action="{{ path('comptes_bancaires_supprimer', {'id': item.id}) }}" method="post">
+        <button type="submit" class="btn btn-danger">Oui</button>
+        <a href="/comptes-bancaires" onclick="closeConfirmation()">Non</a>
+    </form>
+</div>
+
+<script>
+    function closeConfirmation() {
+        document.getElementById('confirmation-dialog').style.display = 'none';
+    }
+</script>

@@ -1,0 +1,40 @@
+/* public/css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.comptes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.comptes-table th, .comptes-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.comptes-table th {
+    background-color: #f2f2f2;
+}
+
+.comptes-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

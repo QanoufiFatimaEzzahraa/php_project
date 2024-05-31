@@ -1,0 +1,96 @@
+/* Ajoutez votre CSS ici */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #343a40;
+    text-decoration: none;
+}
+
+.navbar-toggler {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-collapse {
+    display: flex;
+    align-items: start;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #6c757d;
+}
+
+.nav-link:hover {
+    color: #343a40;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f8f9fa;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.avatar {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        display: none;
+    }
+    .navbar-toggler {
+        display: block;
+    }
+}

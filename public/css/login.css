@@ -1,0 +1,59 @@
+/* Styling for the login container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling for the left column (image) */
+/* Styling for the left column (image) */
+.login-image {
+    width: 55%; /* Augmenter la largeur de l'image */
+    max-width: 450px; /* Augmenter la taille maximale de l'image */
+    padding: 20px;
+}
+
+/* Styling for the right column (form) */
+.login-form {
+    width: 45%; /* Diminuer légèrement la largeur du formulaire */
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+
+/* Styling for the input fields */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Styling for the forgot password link */
+.forgot-password-link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Styling for the login button */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+{% endblock %}
+
+{% block body %}
+    {% if error %}
+        <div class="error login">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    <div class="login-container">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" alt="Phone image" class="login-image">
+        
+        <form name="login" action="{{ path('security.login') }}" method="post" class="login-form">
+            <input type="email" id="username" name="_username" placeholder="Adresse email" required class="input-field">
+            <input type="password" id="password" name="_password" placeholder="Mot de passe" required class="input-field">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            
+            <a href="#!" class="forgot-password-link">Mot de passe oublié ?</a>
+            
+            <button type="submit" class="login-button">Connexion</button>
+            
+        </form>
+        <a href="/inscription"><button class="login-button">Inscription  </button></a> 
+    </div>
+{% endblock %}

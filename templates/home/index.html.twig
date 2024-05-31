@@ -1,0 +1,88 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    SpeedfeeAHRAHI 202 - Gestion Financière
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/css/index.css">
+{% endblock %}
+
+{% block body %}
+
+    <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Gestion financière simplifiée pour les petites entreprises</h1>
+                <p>Automatisez vos tâches financières et prenez des décisions éclairées pour faire prospérer votre entreprise.</p>
+            </div>
+    </section>
+
+    <section class="features" id="features">
+            <div class="container">
+                <h2>Nos Fonctionnalités</h2>
+                <div class="feature-list">
+                
+                    <div class="feature-item">
+                        <a href="{{ path('choix_type_compte') }}" > <h3>Gestion des comptes</h3> </a>
+                        <p>Créez et gerer vos comptes bancaires en quelques clics.</p>
+                    </div>
+               
+
+                    <div class="feature-item">
+                        
+                        <a href="{{ path('expense_index') }}" > <h3>Suivi des dépenses </h3> </a>
+                        <p>Suivez vos dépenses et gardez un œil sur votre trésorerie.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Facturation automatisée</h3>
+                        <p>Créez et envoyez des factures en quelques clics.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h3>Rapports financiers</h3>
+                        <p>Générez des rapports détaillés pour une meilleure visibilité de vos finances.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="testimonials">
+            <div class="container">
+                <h2>Ce que disent nos clients</h2>
+                <div class="testimonial-list">
+                    <div class="testimonial-item">
+                        <p>"Cet outil a révolutionné la gestion de notre comptabilité. Facile à utiliser et très efficace !"</p>
+                        <p><strong>- Jean Dupont, Entreprise ABC</strong></p>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Grâce à ce logiciel, nous avons pu réduire notre temps de gestion financière de moitié."</p>
+                        <p><strong>- Marie Curie, Entreprise XYZ</strong></p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="cta">
+            <div class="container">
+                <h2>Prêt à automatiser votre gestion financière ?</h2>
+                <a href="{{ path('security.login') }}" class="btn">Commencez dès maintenant</a>
+            </div>
+    </section>
+
+    <footer>
+        <a href="{{ path('security.login') }}">
+            <div class="container">
+                <p>&copy; 2024 SpeedfeeAHRAHI - Tous droits réservés.</p>
+                <nav>
+                    <ul>
+                        <li><a href="#privacy-policy">Politique de confidentialité</a></li>
+                        <li><a href="#terms-of-service">Conditions d'utilisation</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </a>
+    </footer>
+
+    <script src="/js/script.js" defer></script>
+{% endblock %}

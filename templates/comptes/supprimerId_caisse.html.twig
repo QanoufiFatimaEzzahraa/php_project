@@ -1,0 +1,57 @@
+{# templates/saisir_id.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Saisir l'ID{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .form-group input {
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Saisir l'ID du compte</h1>
+        <form action="{{ path('supprimer_Id') }}" method="post">
+            <div class="form-group">
+                <label for="compte-id">ID du compte</label>
+                <input type="number" id="compte-id" name="compte_id" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Supprimer</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

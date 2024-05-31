@@ -1,0 +1,47 @@
+{# templates/choix_operation.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Choisir le type d'opération{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .operation {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .operation a {
+            display: block;
+            width: 150px;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 0 10px; /* Ajout de marges horizontales */
+        }
+        .operation a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Choisir le type d'opération</h1>
+        <div class="operation">
+            <a href="{{ path('comptes_caisses') }}">Afficher tous les comptes de caisse</a>
+            <a href="{{ path('comptes_caisses_ajouter') }}">Créer un compte de caisse</a>
+            <a href="{{ path('modifier_Id') }}">Modifier un compte de caisse</a>
+            <a href="{{ path('supprimer_Id') }}">Supprimer un compte de caisse</a>
+        </div>
+    </div>
+{% endblock %}

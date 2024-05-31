@@ -1,0 +1,90 @@
+
+
+{% block body %}
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <h1>Ajouter un Compte de Crédit</h1>
+
+    <div class="form-container">
+        {{ form_start(form) }}
+        <div class="form-group">
+            {{ form_label(form.type) }}
+            {{ form_widget(form.type) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.nomBanque) }}
+            {{ form_widget(form.nomBanque) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.expirationDate) }}
+            {{ form_widget(form.expirationDate) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.cvv) }}
+            {{ form_widget(form.cvv) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.creditLimit) }}
+            {{ form_widget(form.creditLimit) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.availableCredit) }}
+            {{ form_widget(form.availableCredit) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.minimumPayment) }}
+            {{ form_widget(form.minimumPayment) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.interestRate) }}
+            {{ form_widget(form.interestRate) }}
+        </div>
+        <div class="form-group">
+            <button type="submit">Ajouter</button>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

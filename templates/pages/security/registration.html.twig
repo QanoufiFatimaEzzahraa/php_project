@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    FinAssist - Inscription
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        
+		<div class="col-md-6 order-md-2">
+        <img src="{{ asset('images/ins.png') }}" alt="Image d'inscription" class="login-image">
+		</div>
+		<div class="col-md-6 order-md-1">
+			<h1 class="mt-4">Formulaire d'inscription</h1>
+		    <div class="roles-group form-group">
+            {{ form(form) }}
+			</div>
+		</div>
+    </div>
+{% endblock %}
+
